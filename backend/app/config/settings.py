@@ -76,7 +76,7 @@ class Settings(BaseSettings):
     # ==============================================
     # 重排序模型配置
     # ==============================================
-    RERANKER_MODEL_PATH: str = Field(default="./models/Qwen3-Reranker-0.6B", description="重排序模型本地路径")
+    RERANK_MODEL_NAME: str = Field(default="qwen3-rerank", description="阿里云百炼重排序模型名称")
 
     # ==============================================
     # RAG 核心参数
