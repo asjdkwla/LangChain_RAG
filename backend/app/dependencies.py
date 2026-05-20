@@ -19,7 +19,7 @@ engine = create_async_engine(
     echo=False,               # 生产环境关闭 SQL 日志
     pool_size=20,             # 连接池大小
     max_overflow=10,          # 超出 pool_size 时可额外创建的连接数
-    pool_pre_ping=True,       # 每次从池中取出连接时先 ping 测试可用性
+    pool_pre_ping=False,       # 每次从池中取出连接时先 ping 测试可用性
 )
 
 # sessionmaker：创建异步会话工厂，每次调用产生一个 AsyncSession 实例

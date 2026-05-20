@@ -38,11 +38,11 @@ class Settings(BaseSettings):
     MYSQL_PORT: int = Field(default=3306)
     MYSQL_DATABASE: str = Field(default="chat_history")
 
+
     @property
     def MYSQL_URL(self) -> str:
-        """构造异步 MySQL 连接 URL"""
         return (
-            f"mysql+aiomysql://{self.MYSQL_USER}:{self.MYSQL_PASSWORD}"
+            f"mysql+asyncmy://{self.MYSQL_USER}:{self.MYSQL_PASSWORD}"
             f"@{self.MYSQL_HOST}:{self.MYSQL_PORT}/{self.MYSQL_DATABASE}"
         )
 
